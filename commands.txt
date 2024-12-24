@@ -1,0 +1,9 @@
+kubectl run testpod6 --image=nginx:latest -o yaml --dry-run
+kubectl run pod1 --image=nginx:latest --port=80
+        kind       
+kubectl exec -it testpod6 -- bash
+kubectl expose pod testpod6 --name testpod6expose --port=8888 --target-port=8888 --type=NodePort
+kubectl get pods
+kubectl get pods -o wide
+kubectl get statefulsets
+
